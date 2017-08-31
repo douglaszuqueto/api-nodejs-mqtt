@@ -7,7 +7,7 @@ const express = require('express')
 
 const database = {
     'value': 0,
-    'create': new Date()
+    'created': new Date()
 }
 
 /* API */
@@ -44,4 +44,5 @@ client.on('message', (topic, message) => {
 
 const partseData = (topic, value) => {
     database.value = value;
+    database.created = new Date();
 };
